@@ -243,8 +243,10 @@
     // Open the chat and send a question to Encore
     function askEncore(question) {
       if (!encoreReady) {
-        waitingQuestion = question;
-        document.getElementById("hint").textContent = "Encore is loading. Your question will be sent in a moment.";
+        // The chat finishes loading the first time it is opened
+        waitingQuestion = question || null;
+        window.botpress.open();
+        document.getElementById("hint").textContent = "Opening Encore...";
         return;
       }
       window.botpress.open();
@@ -255,7 +257,7 @@
     }
 
     document.getElementById("open-chat").addEventListener("click", function () {
-      if (encoreReady) { window.botpress.open(); }
+      window.botpress.open();
     });
     document.querySelectorAll(".question").forEach(function (btn) {
       btn.addEventListener("click", function () { askEncore(btn.textContent); });
