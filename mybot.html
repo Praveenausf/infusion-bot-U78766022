@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Praveena Vemula">
-  <meta name="description" content="Encore is the fan assistant for the indie rock band Infusion: tour dates, tickets, members, albums and contact details.">
-  <title>Encore | Infusion's Fan Assistant</title>
+  <meta name="description" content="Sara is the fan assistant for the indie rock band Infusion: tour dates, tickets, members, albums and contact details.">
+  <title>Sara | Infusion's Fan Assistant</title>
   <style>
     :root {
       --bg: #0b0614;
@@ -119,17 +119,17 @@
   <header class="banner">
     <div class="container">
       <span class="badge">Infusion &middot; Fan Assistant</span>
-      <h1 class="bot-name">Encore</h1>
-      <p class="tagline">Your backstage pass to Infusion. Ask Encore about tour dates, tickets, the band members, songs and how to reach the band.</p>
-      <button class="open-chat" type="button" id="open-chat">Chat with Encore</button>
+      <h1 class="bot-name">Sara</h1>
+      <p class="tagline">Your backstage pass to Infusion. Ask Sara about tour dates, tickets, the band members, songs and how to reach the band.</p>
+      <button class="open-chat" type="button" id="open-chat">Chat with Sara</button>
     </div>
   </header>
 
   <main class="container">
 
     <section>
-      <h2>What Encore can help with</h2>
-      <p class="section-intro">Encore is an AI chatbot built in Botpress. It answers fan questions using a knowledge base about the indie rock trio Infusion from Tampa, Florida.</p>
+      <h2>What Sara can help with</h2>
+      <p class="section-intro">Sara is an AI chatbot built in Botpress. It answers fan questions using a knowledge base about the indie rock trio Infusion from Tampa, Florida.</p>
       <div class="topics">
         <div class="topic"><div class="icon" aria-hidden="true">&#127915;</div><h3>Tour dates</h3><p>Every stop on the Glasshouse Weather Tour, with venues, door times and which shows are sold out.</p></div>
         <div class="topic"><div class="icon" aria-hidden="true">&#127903;</div><h3>Tickets</h3><p>General admission and VIP prices, what VIP includes, ticket limits, refunds and waitlists.</p></div>
@@ -141,8 +141,8 @@
     </section>
 
     <section>
-      <h2>The data behind Encore</h2>
-      <p class="section-intro">These are some of the facts loaded into Encore's knowledge base.</p>
+      <h2>The data behind Sara</h2>
+      <p class="section-intro">These are some of the facts loaded into Sara's knowledge base.</p>
       <div class="split">
         <div class="panel">
           <h3>Glasshouse Weather Tour</h3>
@@ -175,8 +175,8 @@
     </section>
 
     <section id="ask">
-      <h2>Ask Encore</h2>
-      <p class="section-intro">Click any question and Encore will answer it in the chat window, or open the chat and type your own.</p>
+      <h2>Ask Sara</h2>
+      <p class="section-intro">Click any question and Sara will answer it in the chat window, or open the chat and type your own.</p>
       <div class="questions">
         <button class="question" type="button">When is Infusion playing in Atlanta?</button>
         <button class="question" type="button">Is the Orlando show sold out?</button>
@@ -189,34 +189,34 @@
         <button class="question" type="button">How do I join the fan club?</button>
         <button class="question" type="button">What awards has Infusion won?</button>
       </div>
-      <p class="hint" id="hint">The Encore chat button is in the bottom-right corner of the page.</p>
+      <p class="hint" id="hint">The Sara chat button is in the bottom-right corner of the page.</p>
     </section>
 
     <section>
-      <h2>How Encore was built</h2>
+      <h2>How Sara was built</h2>
       <div class="steps">
         <div class="step"><h3>Knowledge base</h3><p>I wrote two knowledge files about Infusion: members, albums and track lists, tour dates and ticket sales, streaming stats, venue rules, the fan club and contact details.</p></div>
-        <div class="step"><h3>Botpress bot</h3><p>I created Encore in Botpress Viber, uploaded both files and told it to answer only from that information.</p></div>
-        <div class="step"><h3>This webpage</h3><p>I published Encore on Botpress Webchat, added the chat widget to this page, and hosted the page on GitHub Pages.</p></div>
+        <div class="step"><h3>Botpress bot</h3><p>I created Sara in Botpress Viber, uploaded both files and told it to answer only from that information.</p></div>
+        <div class="step"><h3>This webpage</h3><p>I published Sara on Botpress Webchat, added the chat widget to this page, and hosted the page on GitHub Pages.</p></div>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <div class="container">Encore &middot; Fan assistant for Infusion &middot; Built by Praveena Vemula</div>
+    <div class="container">Sara &middot; Fan assistant for Infusion &middot; Built by Praveena Vemula</div>
   </footer>
 
-  <!-- Botpress webchat for Encore -->
+  <!-- Botpress webchat for Sara -->
   <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
   <script>
-    var encoreReady = false;
+    var saraReady = false;
     var waitingQuestion = null;
 
     window.botpress.on("webchat:ready", function () {
-      encoreReady = true;
+      saraReady = true;
       if (waitingQuestion) {
-        askEncore(waitingQuestion);
+        askSara(waitingQuestion);
         waitingQuestion = null;
       }
     });
@@ -226,33 +226,33 @@
       clientId: "ae676386-9c00-43bf-ab7b-aabc959871b0",
       configuration: {
         version: "v2",
-        botName: "Encore",
+        botName: "Sara",
         botDescription: "Friendly fan information assistant for Infusion.",
         feedbackEnabled: true,
         allowFileUpload: false,
         soundEnabled: true,
         conversationHistory: true,
         homePageEnabled: true,
-        welcomeHeading: "Hi, I'm Encore, Infusion's fan assistant!",
+        welcomeHeading: "Hi, I'm Sara, Infusion's fan assistant!",
         welcomeSubtitle: "Ask me about tour dates, tickets, the band or our music.",
         citationsEnabled: true,
         color: "#ec4899"
       }
     });
 
-    // Open the chat and send a question to Encore
-    function askEncore(question) {
-      if (!encoreReady) {
+    // Open the chat and send a question to Sara
+    function askSara(question) {
+      if (!saraReady) {
         // The chat finishes loading the first time it is opened
         waitingQuestion = question || null;
         window.botpress.open();
-        document.getElementById("hint").textContent = "Opening Encore...";
+        document.getElementById("hint").textContent = "Opening Sara...";
         return;
       }
       window.botpress.open();
       if (question) {
         window.botpress.sendMessage(question);
-        document.getElementById("hint").textContent = "Sent \"" + question + "\" to Encore. See the answer in the chat window.";
+        document.getElementById("hint").textContent = "Sent \"" + question + "\" to Sara. See the answer in the chat window.";
       }
     }
 
@@ -260,7 +260,7 @@
       window.botpress.open();
     });
     document.querySelectorAll(".question").forEach(function (btn) {
-      btn.addEventListener("click", function () { askEncore(btn.textContent); });
+      btn.addEventListener("click", function () { askSara(btn.textContent); });
     });
   </script>
 </body>
